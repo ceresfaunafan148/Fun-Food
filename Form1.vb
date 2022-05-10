@@ -1,9 +1,6 @@
 ﻿Public Class Form1
     Dim PriceTotal As Double
-    Dim ItemOneQuantity As Integer
-    Dim ItemTwoQuantity As Integer
-    Dim ItemThreeQuantity As Integer
-
+    Dim ItemQuantity(9) As Integer
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
@@ -117,14 +114,14 @@
 
     Private Sub ItemAddFood_Click(sender As Object, e As EventArgs) Handles ItemAddFood.Click
         If ButtonGrain.Enabled = False Then
-            ItemOneQuantity = ItemOneQuantity + 1
-            ItemOneLabel.Text = (Convert.ToString(ItemOneQuantity))
+            ItemQuantity(0) = ItemQuantity(0) + 1
+            ItemOneLabel.Text = (Convert.ToString(ItemQuantity(0)))
         ElseIf ButtonChicken.Enabled = False Then
-            ItemTwoQuantity = ItemTwoQuantity + 1
-            ItemTwoLabel.Text = (Convert.ToString(ItemTwoQuantity))
+            ItemQuantity(1) = ItemQuantity(1) + 1
+            ItemTwoLabel.Text = (Convert.ToString(ItemQuantity(1)))
         ElseIf ButtonFish.Enabled = False Then
-            ItemThreeQuantity = ItemThreeQuantity + 1
-            ItemThreeLabel.Text = (Convert.ToString(ItemThreeQuantity))
+            ItemQuantity(2) = ItemQuantity(2) + 1
+            ItemThreeLabel.Text = (Convert.ToString(ItemQuantity(2)))
         End If
     End Sub
 
@@ -134,27 +131,40 @@
 
     Private Sub ItemSubtractFood_Click(sender As Object, e As EventArgs) Handles ItemSubtractFood.Click
         If ButtonGrain.Enabled = False Then
-            ItemOneQuantity = ItemOneQuantity - 1
-            ItemOneLabel.Text = (Convert.ToString(ItemOneQuantity))
+            ItemQuantity(0) = ItemQuantity(0) - 1
+            ItemOneLabel.Text = (Convert.ToString(ItemQuantity(0)))
         ElseIf ButtonChicken.Enabled = False Then
-            ItemTwoQuantity = ItemTwoQuantity - 1
-            ItemTwoLabel.Text = (Convert.ToString(ItemTwoQuantity))
+            ItemQuantity(1) = ItemQuantity(1) - 1
+            ItemTwoLabel.Text = (Convert.ToString(ItemQuantity(1)))
         ElseIf ButtonFish.Enabled = False Then
-            ItemThreeQuantity = ItemThreeQuantity - 1
-            ItemThreeLabel.Text = (Convert.ToString(ItemThreeQuantity))
+            ItemQuantity(2) = ItemQuantity(2) - 1
+            ItemThreeLabel.Text = (Convert.ToString(ItemQuantity(2)))
+        End If
+
+        If ItemQuantity(0) = 0 Then
+            ItemQuantity(0) = ItemQuantity(0) + 1
+        End If
+        If ItemQuantity(1) = 0 Then
+            ItemQuantity(1) = ItemQuantity(1) + 1
+        End If
+        If ItemQuantity(2) = 0 Then
+            ItemQuantity(2) = ItemQuantity(2) + 1
+        End If
+        If ItemQuantity(3) = 0 Then
+            ItemQuantity(3) = ItemQuantity(3) + 1
         End If
     End Sub
 
     Private Sub ButtonVoidFood_Click(sender As Object, e As EventArgs) Handles ButtonVoidFood.Click
         If ButtonGrain.Enabled = False Then
-            ItemOneQuantity = ItemOneQuantity = 0
-            ItemOneLabel.Text = (Convert.ToString(ItemOneQuantity))
+            ItemQuantity(0) = 0
+            ItemOneLabel.Text = (Convert.ToString(ItemQuantity(0)))
         ElseIf ButtonChicken.Enabled = False Then
-            ItemTwoQuantity = ItemTwoQuantity = 0
-            ItemTwoLabel.Text = (Convert.ToString(ItemTwoQuantity))
+            ItemQuantity(1) = 0
+            ItemTwoLabel.Text = (Convert.ToString(ItemQuantity(1)))
         ElseIf ButtonFish.Enabled = False Then
-            ItemThreeQuantity = ItemThreeQuantity = 0
-            ItemThreeLabel.Text = (Convert.ToString(ItemThreeQuantity))
+            ItemQuantity(2) = 0
+            ItemThreeLabel.Text = (Convert.ToString(ItemQuantity(2)))
         End If
     End Sub
 
@@ -164,5 +174,98 @@
 
     Private Sub ComboBoxPayment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxPayment.SelectedIndexChanged
 
+    End Sub
+
+    Private Sub PanelOrderDetails_Paint(sender As Object, e As PaintEventArgs) Handles PanelOrderDetails.Paint
+
+    End Sub
+
+    Private Sub ButtonWater_Click(sender As Object, e As EventArgs) Handles ButtonWater.Click
+        ButtonWater.Enabled = False
+        ButtonFruitPunch.Enabled = True
+        ButtonAlmondMilk.Enabled = True
+        ButtonVegetableSmoothie.Enabled = True
+    End Sub
+
+    Private Sub ButtonAlmondMilk_Click(sender As Object, e As EventArgs) Handles ButtonAlmondMilk.Click
+        ButtonWater.Enabled = True
+        ButtonFruitPunch.Enabled = True
+        ButtonAlmondMilk.Enabled = False
+        ButtonVegetableSmoothie.Enabled = True
+    End Sub
+
+    Private Sub ButtonVegetableSmoothie_Click(sender As Object, e As EventArgs) Handles ButtonVegetableSmoothie.Click
+        ButtonWater.Enabled = True
+        ButtonFruitPunch.Enabled = True
+        ButtonAlmondMilk.Enabled = True
+        ButtonVegetableSmoothie.Enabled = False
+    End Sub
+
+    Private Sub ButtonFruitPunch_Click(sender As Object, e As EventArgs) Handles ButtonFruitPunch.Click
+        ButtonWater.Enabled = True
+        ButtonFruitPunch.Enabled = False
+        ButtonAlmondMilk.Enabled = True
+        ButtonVegetableSmoothie.Enabled = True
+    End Sub
+
+    Private Sub ItemAddDrinks_Click(sender As Object, e As EventArgs) Handles ItemAddDrinks.Click
+        If ButtonWater.Enabled = False Then
+            ItemQuantity(3) = ItemQuantity(3) + 1
+            ItemFourLabel.Text = (Convert.ToString(ItemQuantity(3)))
+        ElseIf ButtonFruitPunch.Enabled = False Then
+            ItemQuantity(4) = ItemQuantity(4) + 1
+            ItemFiveLabel.Text = (Convert.ToString(ItemQuantity(4)))
+        ElseIf ButtonAlmondMilk.Enabled = False Then
+            ItemQuantity(5) = ItemQuantity(5) + 1
+            ItemSixLabel.Text = (Convert.ToString(ItemQuantity(5)))
+        ElseIf ButtonVegetableSmoothie.Enabled = False Then
+            ItemQuantity(6) = ItemQuantity(6) + 1
+            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
+        End If
+    End Sub
+
+    Private Sub ItemSubtractDrinks_Click(sender As Object, e As EventArgs) Handles ItemSubtractDrinks.Click
+        If ButtonWater.Enabled = False Then
+            ItemQuantity(3) = ItemQuantity(3) - 1
+            ItemFourLabel.Text = (Convert.ToString(ItemQuantity(3)))
+        ElseIf ButtonFruitPunch.Enabled = False Then
+            ItemQuantity(4) = ItemQuantity(4) - 1
+            ItemFiveLabel.Text = (Convert.ToString(ItemQuantity(4)))
+        ElseIf ButtonAlmondMilk.Enabled = False Then
+            ItemQuantity(5) = ItemQuantity(5) - 1
+            ItemSixLabel.Text = (Convert.ToString(ItemQuantity(5)))
+        ElseIf ButtonVegetableSmoothie.Enabled = False Then
+            ItemQuantity(6) = ItemQuantity(6) - 1
+            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
+        End If
+
+        If ItemQuantity(3) = 0 Then
+            ItemQuantity(3) = ItemQuantity(3) + 1
+        End If
+        If ItemQuantity(4) = 0 Then
+            ItemQuantity(4) = ItemQuantity(4) + 1
+        End If
+        If ItemQuantity(5) = 0 Then
+            ItemQuantity(5) = ItemQuantity(5) + 1
+        End If
+        If ItemQuantity(6) = 0 Then
+            ItemQuantity(6) = ItemQuantity(6) + 1
+        End If
+    End Sub
+
+    Private Sub ItemVoidDrinks_Click(sender As Object, e As EventArgs) Handles ItemVoidDrinks.Click
+        If ButtonWater.Enabled = False Then
+            ItemQuantity(3) = 0
+            ItemFourLabel.Text = (Convert.ToString(ItemQuantity(3)))
+        ElseIf ButtonFruitPunch.Enabled = False Then
+            ItemQuantity(4) = 0
+            ItemFiveLabel.Text = (Convert.ToString(ItemQuantity(4)))
+        ElseIf ButtonAlmondMilk.Enabled = False Then
+            ItemQuantity(5) = 0
+            ItemSixLabel.Text = (Convert.ToString(ItemQuantity(5)))
+        ElseIf ButtonVegetableSmoothie.Enabled = False Then
+            ItemQuantity(6) = 0
+            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
+        End If
     End Sub
 End Class
