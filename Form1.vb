@@ -1,23 +1,15 @@
 ﻿Public Class Form1
-    Dim PriceTotal As Double
-    Dim ItemQuantity(9) As Integer
+    Dim ItemQuantity(9) As Integer 'This array stores the quantity of each item as whole integers
+    Dim ItemPrice(9) As Double 'This array stores the price of each item as a double
+    Dim TotalPrice As Double 'This double stores the total price of all items times quantity before tax and surcharge
+    Dim FinalPrice As Double 'This double stores the final price of all items times quantity after tax and surcharge
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles LabelTitle.Click
-
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles ButtonTakeAway.Click
         ButtonTakeAway.Enabled = False
         ButtonDelivery.Enabled = True
     End Sub
-
-    Private Sub PanelMain_Paint(sender As Object, e As PaintEventArgs) Handles PanelNewOrder.Paint
-
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles ButtonGrain.Click
         ButtonGrain.Enabled = False
         ButtonChicken.Enabled = True
@@ -36,15 +28,11 @@
     Private Sub ButtonDelivery_Click(sender As Object, e As EventArgs) Handles ButtonDelivery.Click
         ButtonTakeAway.Enabled = True
         ButtonDelivery.Enabled = False
-        PriceTotal = PriceTotal - 3
+        FinalPrice = FinalPrice + 3.0 ' Adds 3.00 to the final price as the delivery surcharge
     End Sub
 
     Private Sub ButtonRestart_Click(sender As Object, e As EventArgs) Handles ButtonRestart.Click
         Application.Restart()
-    End Sub
-
-    Private Sub ButtonTest_Click(sender As Object, e As EventArgs) Handles LabelTest.Click
-        PriceTotal = PriceTotal - 3
     End Sub
 
     Private Sub ButtonFood_Click(sender As Object, e As EventArgs) Handles ButtonFood.Click
@@ -92,14 +80,6 @@
         PanelOrderHistory.Visible = True
     End Sub
 
-    Private Sub RadioButtonReceipt_CheckedChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PanelSides_Paint(sender As Object, e As PaintEventArgs) Handles PanelSides.Paint
-
-    End Sub
-
     Private Sub ButtonChicken_Click(sender As Object, e As EventArgs) Handles ButtonChicken.Click
         ButtonGrain.Enabled = True
         ButtonChicken.Enabled = False
@@ -107,7 +87,7 @@
     End Sub
 
     Private Sub ButtonFish_Click(sender As Object, e As EventArgs) Handles ButtonFish.Click
-        ButtonGrain.Enabled = True
+        ButtonGrain.Enabled = True '????
         ButtonChicken.Enabled = True
         ButtonFish.Enabled = False
     End Sub
@@ -125,11 +105,8 @@
         End If
     End Sub
 
-    Private Sub ItemOneQuantity_Click(sender As Object, e As EventArgs) Handles ItemOneLabel.Click
-
-    End Sub
-
     Private Sub ItemSubtractFood_Click(sender As Object, e As EventArgs) Handles ItemSubtractFood.Click
+
         If ButtonGrain.Enabled = False Then
             ItemQuantity(0) = ItemQuantity(0) - 1
             ItemOneLabel.Text = (Convert.ToString(ItemQuantity(0)))
@@ -139,9 +116,8 @@
         ElseIf ButtonFish.Enabled = False Then
             ItemQuantity(2) = ItemQuantity(2) - 1
             ItemThreeLabel.Text = (Convert.ToString(ItemQuantity(2)))
-        End If
 
-        If ItemQuantity(0) = 0 Then
+            Next If ItemQuantity(0) = 0 Then
             ItemQuantity(0) = ItemQuantity(0) + 1
         End If
         If ItemQuantity(1) = 0 Then
@@ -150,9 +126,8 @@
         If ItemQuantity(2) = 0 Then
             ItemQuantity(2) = ItemQuantity(2) + 1
         End If
-        If ItemQuantity(3) = 0 Then
-            ItemQuantity(3) = ItemQuantity(3) + 1
-        End If
+
+
     End Sub
 
     Private Sub ButtonVoidFood_Click(sender As Object, e As EventArgs) Handles ButtonVoidFood.Click
@@ -167,19 +142,6 @@
             ItemThreeLabel.Text = (Convert.ToString(ItemQuantity(2)))
         End If
     End Sub
-
-    Private Sub PriceGrain_Click(sender As Object, e As EventArgs) Handles PriceGrain.Click
-
-    End Sub
-
-    Private Sub ComboBoxPayment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxPayment.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub PanelOrderDetails_Paint(sender As Object, e As PaintEventArgs) Handles PanelOrderDetails.Paint
-
-    End Sub
-
     Private Sub ButtonWater_Click(sender As Object, e As EventArgs) Handles ButtonWater.Click
         ButtonWater.Enabled = False
         ButtonFruitPunch.Enabled = True
@@ -268,4 +230,82 @@
             ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
         End If
     End Sub
+
+    Private Sub ItemAddSides_Click(sender As Object, e As EventArgs) Handles ItemAddSides.Click
+        If ButtonFruitSalad.Enabled = False Then
+            ItemQuantity(7) = ItemQuantity(7) + 1
+            ItemFourLabel.Text = (Convert.ToString(ItemQuantity(7)))
+        ElseIf ButtonVegetableSalad.Enabled = False Then
+            ItemQuantity(8) = ItemQuantity(8) + 1
+            ItemFiveLabel.Text = (Convert.ToString(ItemQuantity(8)))
+        ElseIf ButtonBoneMarrow.Enabled = False Then
+            ItemQuantity(9) = ItemQuantity(9) + 1
+            ItemSixLabel.Text = (Convert.ToString(ItemQuantity(9)))
+        End If
+    End Sub
+
+    Private Sub ItemSubtractSides_Click(sender As Object, e As EventArgs) Handles ItemSubtractSides.Click
+        If ButtonFruitSalad.Enabled = False Then
+            ItemQuantity(7) = ItemQuantity(7) - 1
+            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(7)))
+        ElseIf ButtonVegetableSalad.Enabled = False Then
+            ItemQuantity(8) = ItemQuantity(8) - 1
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(8)))
+        ElseIf ButtonBoneMarrow.Enabled = False Then
+            ItemQuantity(9) = ItemQuantity(9) - 1
+            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(9)))
+        End If
+
+        If ItemQuantity(7) = 0 Then
+            ItemQuantity(7) = ItemQuantity(7) + 1
+        End If
+        If ItemQuantity(8) = 0 Then
+            ItemQuantity(8) = ItemQuantity(8) + 1
+        End If
+        If ItemQuantity(9) = 0 Then
+            ItemQuantity(9) = ItemQuantity(9) + 1
+        End If
+    End Sub
+
+    Private Sub ItemVoidSides_Click(sender As Object, e As EventArgs) Handles ItemVoidSides.Click
+        If ButtonFruitSalad.Enabled = False Then
+            ItemQuantity(7) = 0
+            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(7)))
+        ElseIf ButtonChicken.Enabled = False Then
+            ItemQuantity(8) = 0
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(8)))
+        ElseIf ButtonFish.Enabled = False Then
+            ItemQuantity(9) = 0
+            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(9)))
+        End If
+    End Sub
+
+    Private Sub ButtonSubmit_Click(sender As Object, e As EventArgs) Handles ButtonSubmit.Click
+        ListBoxReceipt.Items.Add("PAYMENT METHOD: " + ComboBoxPayment.SelectedItem)
+        ListBoxReceipt.Items.Add("CUSTOMER NAME: " + TextBoxName)
+        ListBoxReceipt.Items.Add("===================================")
+        If ButtonDelivery.Enabled = False Then
+            ListBox.Receipt.Items.Add("PHONE: " + TextBoxPhoneNumber.Text)
+            ListBox.Receipt.Items.Add("EMAIL: " + TextBoxEmail.Text)
+            ListBoxReceipt.Items.Add("ADDRESS: " + TextBoxUnitNumber.Text + TextBoxStreetNumber.Text + TextBoxSuburb.Text + TextBoxPostCode.Text)
+            'Add try catches for literally everything
+        End If
+        Dim ItemName(9) As String 'This array stores the names of all items 
+        ' local variable definition 
+        ItemName(0) = Grain
+        ItemName(1) = Chicken
+        ItemName(2) = Fish
+        ItemName(3) = Water
+        ItemName(4) = Fruit Punch
+        ItemName(5) = Almond Milk
+        ItemName(6) = Vegetable Smoothie
+        ItemName(7) = Fruit Salad
+        ItemName(8) = Vegetable Salad
+        ItemName(9) = Bone Marrow 
+     
+
+    End Sub
+    End Module
+    End Sub
+
 End Class

@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelNewOrder = New System.Windows.Forms.Panel()
-        Me.TextBoxPostCode = New System.Windows.Forms.TextBox()
         Me.TextBoxSuburb = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -41,6 +40,7 @@ Partial Class Form1
         Me.TextBoxName = New System.Windows.Forms.TextBox()
         Me.ButtonDelivery = New System.Windows.Forms.Button()
         Me.ButtonTakeAway = New System.Windows.Forms.Button()
+        Me.TextBoxPostCode = New System.Windows.Forms.TextBox()
         Me.PanelTop = New System.Windows.Forms.Panel()
         Me.LabelTest = New System.Windows.Forms.Label()
         Me.ButtonRestart = New System.Windows.Forms.Button()
@@ -69,7 +69,6 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PanelDrinks = New System.Windows.Forms.Panel()
-        Me.ItemSevenLabel = New System.Windows.Forms.Label()
         Me.ItemSixLabel = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.ButtonVegetableSmoothie = New System.Windows.Forms.Button()
@@ -85,36 +84,39 @@ Partial Class Form1
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.PanelSides = New System.Windows.Forms.Panel()
-        Me.PanelOrderDetails = New System.Windows.Forms.Panel()
-        Me.TextBoxCRYPTO = New System.Windows.Forms.TextBox()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBoxNameCredit = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.TextBoxCVV = New System.Windows.Forms.TextBox()
-        Me.TextBoxCreditNumber = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.ComboBoxPayment = New System.Windows.Forms.ComboBox()
-        Me.PanelOrderHistory = New System.Windows.Forms.Panel()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.ButtonVoidItem = New System.Windows.Forms.Button()
         Me.ItemVoidSides = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.ItemNineLabel = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.ButtonBoneMarrow = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.ButtonVegetableSalad = New System.Windows.Forms.Button()
         Me.ItemSubtractSides = New System.Windows.Forms.Button()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.ItemEightLabel = New System.Windows.Forms.Label()
         Me.ItemAddSides = New System.Windows.Forms.Button()
-        Me.Label30 = New System.Windows.Forms.Label()
+        Me.ItemSevenLabel = New System.Windows.Forms.Label()
         Me.ButtonFruitSalad = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
+        Me.PanelOrderDetails = New System.Windows.Forms.Panel()
+        Me.WriteReceipt = New System.Windows.Forms.Button()
+        Me.ButtonEmailReceipt = New System.Windows.Forms.Button()
+        Me.ListBoxReceipt = New System.Windows.Forms.ListBox()
+        Me.ButtonSubmit = New System.Windows.Forms.Button()
+        Me.LabelFinalPrice = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.TextBoxNameCredit = New System.Windows.Forms.TextBox()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.TextBoxCVV = New System.Windows.Forms.TextBox()
+        Me.TextBoxCreditNumber = New System.Windows.Forms.TextBox()
+        Me.LabelTotalPrice = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ComboBoxPayment = New System.Windows.Forms.ComboBox()
+        Me.PanelOrderHistory = New System.Windows.Forms.Panel()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ButtonVoidItem = New System.Windows.Forms.Button()
         Me.PanelNewOrder.SuspendLayout()
         Me.PanelTop.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
@@ -129,7 +131,6 @@ Partial Class Form1
         '
         Me.PanelNewOrder.AccessibleName = "wewe"
         Me.PanelNewOrder.BackColor = System.Drawing.Color.Gainsboro
-        Me.PanelNewOrder.Controls.Add(Me.TextBoxPostCode)
         Me.PanelNewOrder.Controls.Add(Me.TextBoxSuburb)
         Me.PanelNewOrder.Controls.Add(Me.Label8)
         Me.PanelNewOrder.Controls.Add(Me.Label7)
@@ -147,17 +148,11 @@ Partial Class Form1
         Me.PanelNewOrder.Controls.Add(Me.TextBoxName)
         Me.PanelNewOrder.Controls.Add(Me.ButtonDelivery)
         Me.PanelNewOrder.Controls.Add(Me.ButtonTakeAway)
+        Me.PanelNewOrder.Controls.Add(Me.TextBoxPostCode)
         Me.PanelNewOrder.Location = New System.Drawing.Point(206, 89)
         Me.PanelNewOrder.Name = "PanelNewOrder"
         Me.PanelNewOrder.Size = New System.Drawing.Size(957, 518)
         Me.PanelNewOrder.TabIndex = 0
-        '
-        'TextBoxPostCode
-        '
-        Me.TextBoxPostCode.Location = New System.Drawing.Point(230, 279)
-        Me.TextBoxPostCode.Name = "TextBoxPostCode"
-        Me.TextBoxPostCode.Size = New System.Drawing.Size(240, 23)
-        Me.TextBoxPostCode.TabIndex = 19
         '
         'TextBoxSuburb
         '
@@ -299,6 +294,13 @@ Partial Class Form1
         Me.ButtonTakeAway.TabIndex = 0
         Me.ButtonTakeAway.Text = "TAKE AWAY"
         Me.ButtonTakeAway.UseVisualStyleBackColor = True
+        '
+        'TextBoxPostCode
+        '
+        Me.TextBoxPostCode.Location = New System.Drawing.Point(230, 279)
+        Me.TextBoxPostCode.Name = "TextBoxPostCode"
+        Me.TextBoxPostCode.Size = New System.Drawing.Size(240, 23)
+        Me.TextBoxPostCode.TabIndex = 19
         '
         'PanelTop
         '
@@ -476,7 +478,6 @@ Partial Class Form1
         '
         'ButtonFish
         '
-        Me.ButtonFish.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonFish.Location = New System.Drawing.Point(400, 21)
         Me.ButtonFish.Name = "ButtonFish"
         Me.ButtonFish.Size = New System.Drawing.Size(182, 178)
@@ -504,7 +505,6 @@ Partial Class Form1
         '
         'ButtonChicken
         '
-        Me.ButtonChicken.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonChicken.Location = New System.Drawing.Point(212, 21)
         Me.ButtonChicken.Name = "ButtonChicken"
         Me.ButtonChicken.Size = New System.Drawing.Size(182, 178)
@@ -552,7 +552,6 @@ Partial Class Form1
         '
         'ButtonGrain
         '
-        Me.ButtonGrain.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonGrain.Location = New System.Drawing.Point(10, 21)
         Me.ButtonGrain.Name = "ButtonGrain"
         Me.ButtonGrain.Size = New System.Drawing.Size(182, 178)
@@ -581,7 +580,6 @@ Partial Class Form1
         'PanelDrinks
         '
         Me.PanelDrinks.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.PanelDrinks.Controls.Add(Me.ItemSevenLabel)
         Me.PanelDrinks.Controls.Add(Me.ItemSixLabel)
         Me.PanelDrinks.Controls.Add(Me.Label29)
         Me.PanelDrinks.Controls.Add(Me.ButtonVegetableSmoothie)
@@ -600,14 +598,6 @@ Partial Class Form1
         Me.PanelDrinks.Name = "PanelDrinks"
         Me.PanelDrinks.Size = New System.Drawing.Size(957, 518)
         Me.PanelDrinks.TabIndex = 4
-        '
-        'ItemSevenLabel
-        '
-        Me.ItemSevenLabel.AutoSize = True
-        Me.ItemSevenLabel.Location = New System.Drawing.Point(680, 207)
-        Me.ItemSevenLabel.Name = "ItemSevenLabel"
-        Me.ItemSevenLabel.Size = New System.Drawing.Size(0, 15)
-        Me.ItemSevenLabel.TabIndex = 34
         '
         'ItemSixLabel
         '
@@ -740,16 +730,16 @@ Partial Class Form1
         Me.PanelSides.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.PanelSides.Controls.Add(Me.ItemVoidSides)
         Me.PanelSides.Controls.Add(Me.Label20)
-        Me.PanelSides.Controls.Add(Me.Label21)
+        Me.PanelSides.Controls.Add(Me.ItemNineLabel)
         Me.PanelSides.Controls.Add(Me.Label23)
         Me.PanelSides.Controls.Add(Me.ButtonBoneMarrow)
         Me.PanelSides.Controls.Add(Me.Label24)
         Me.PanelSides.Controls.Add(Me.Label25)
         Me.PanelSides.Controls.Add(Me.ButtonVegetableSalad)
         Me.PanelSides.Controls.Add(Me.ItemSubtractSides)
-        Me.PanelSides.Controls.Add(Me.Label26)
+        Me.PanelSides.Controls.Add(Me.ItemEightLabel)
         Me.PanelSides.Controls.Add(Me.ItemAddSides)
-        Me.PanelSides.Controls.Add(Me.Label30)
+        Me.PanelSides.Controls.Add(Me.ItemSevenLabel)
         Me.PanelSides.Controls.Add(Me.ButtonFruitSalad)
         Me.PanelSides.Controls.Add(Me.Label31)
         Me.PanelSides.Controls.Add(Me.Label32)
@@ -757,143 +747,6 @@ Partial Class Form1
         Me.PanelSides.Name = "PanelSides"
         Me.PanelSides.Size = New System.Drawing.Size(957, 518)
         Me.PanelSides.TabIndex = 5
-        '
-        'PanelOrderDetails
-        '
-        Me.PanelOrderDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.PanelOrderDetails.Controls.Add(Me.TextBoxCRYPTO)
-        Me.PanelOrderDetails.Controls.Add(Me.Label19)
-        Me.PanelOrderDetails.Controls.Add(Me.Label18)
-        Me.PanelOrderDetails.Controls.Add(Me.TextBoxNameCredit)
-        Me.PanelOrderDetails.Controls.Add(Me.Label17)
-        Me.PanelOrderDetails.Controls.Add(Me.Label16)
-        Me.PanelOrderDetails.Controls.Add(Me.TextBoxCVV)
-        Me.PanelOrderDetails.Controls.Add(Me.TextBoxCreditNumber)
-        Me.PanelOrderDetails.Controls.Add(Me.Label15)
-        Me.PanelOrderDetails.Controls.Add(Me.Label14)
-        Me.PanelOrderDetails.Controls.Add(Me.ComboBoxPayment)
-        Me.PanelOrderDetails.Location = New System.Drawing.Point(206, 89)
-        Me.PanelOrderDetails.Name = "PanelOrderDetails"
-        Me.PanelOrderDetails.Size = New System.Drawing.Size(959, 518)
-        Me.PanelOrderDetails.TabIndex = 6
-        '
-        'TextBoxCRYPTO
-        '
-        Me.TextBoxCRYPTO.Location = New System.Drawing.Point(245, 54)
-        Me.TextBoxCRYPTO.Name = "TextBoxCRYPTO"
-        Me.TextBoxCRYPTO.Size = New System.Drawing.Size(100, 23)
-        Me.TextBoxCRYPTO.TabIndex = 10
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(247, 35)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(60, 15)
-        Me.Label19.TabIndex = 9
-        Me.Label19.Text = "CRYPTO :)"
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(10, 63)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(96, 15)
-        Me.Label18.TabIndex = 8
-        Me.Label18.Text = "NAME ON CARD"
-        '
-        'TextBoxNameCredit
-        '
-        Me.TextBoxNameCredit.Location = New System.Drawing.Point(10, 79)
-        Me.TextBoxNameCredit.Name = "TextBoxNameCredit"
-        Me.TextBoxNameCredit.Size = New System.Drawing.Size(121, 23)
-        Me.TextBoxNameCredit.TabIndex = 7
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(8, 110)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(130, 15)
-        Me.Label17.TabIndex = 6
-        Me.Label17.Text = "CREDIT CARD NUMBER"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(10, 160)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(29, 15)
-        Me.Label16.TabIndex = 5
-        Me.Label16.Text = "CVV"
-        '
-        'TextBoxCVV
-        '
-        Me.TextBoxCVV.Location = New System.Drawing.Point(10, 178)
-        Me.TextBoxCVV.Name = "TextBoxCVV"
-        Me.TextBoxCVV.Size = New System.Drawing.Size(100, 23)
-        Me.TextBoxCVV.TabIndex = 4
-        '
-        'TextBoxCreditNumber
-        '
-        Me.TextBoxCreditNumber.Location = New System.Drawing.Point(10, 128)
-        Me.TextBoxCreditNumber.Name = "TextBoxCreditNumber"
-        Me.TextBoxCreditNumber.Size = New System.Drawing.Size(219, 23)
-        Me.TextBoxCreditNumber.TabIndex = 3
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(10, 217)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(58, 15)
-        Me.Label15.TabIndex = 2
-        Me.Label15.Text = "TotalPrice"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(10, 16)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(111, 15)
-        Me.Label14.TabIndex = 1
-        Me.Label14.Text = "PAYMENT METHOD"
-        '
-        'ComboBoxPayment
-        '
-        Me.ComboBoxPayment.FormattingEnabled = True
-        Me.ComboBoxPayment.Items.AddRange(New Object() {"CASH", "CREDIT", "CRYPTO"})
-        Me.ComboBoxPayment.Location = New System.Drawing.Point(10, 35)
-        Me.ComboBoxPayment.Name = "ComboBoxPayment"
-        Me.ComboBoxPayment.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBoxPayment.TabIndex = 0
-        '
-        'PanelOrderHistory
-        '
-        Me.PanelOrderHistory.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.PanelOrderHistory.Controls.Add(Me.Label12)
-        Me.PanelOrderHistory.Location = New System.Drawing.Point(206, 89)
-        Me.PanelOrderHistory.Name = "PanelOrderHistory"
-        Me.PanelOrderHistory.Size = New System.Drawing.Size(957, 518)
-        Me.PanelOrderHistory.TabIndex = 7
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(348, 183)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(75, 15)
-        Me.Label12.TabIndex = 0
-        Me.Label12.Text = "OrderHistory"
-        '
-        'ButtonVoidItem
-        '
-        Me.ButtonVoidItem.Location = New System.Drawing.Point(220, 456)
-        Me.ButtonVoidItem.Name = "ButtonVoidItem"
-        Me.ButtonVoidItem.Size = New System.Drawing.Size(94, 48)
-        Me.ButtonVoidItem.TabIndex = 11
-        Me.ButtonVoidItem.Text = "VOID"
-        Me.ButtonVoidItem.UseVisualStyleBackColor = True
         '
         'ItemVoidSides
         '
@@ -913,14 +766,14 @@ Partial Class Form1
         Me.Label20.Size = New System.Drawing.Size(0, 15)
         Me.Label20.TabIndex = 25
         '
-        'Label21
+        'ItemNineLabel
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(429, 197)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(123, 15)
-        Me.Label21.TabIndex = 28
-        Me.Label21.Text = "seventten fortie wallet"
+        Me.ItemNineLabel.AutoSize = True
+        Me.ItemNineLabel.Location = New System.Drawing.Point(429, 197)
+        Me.ItemNineLabel.Name = "ItemNineLabel"
+        Me.ItemNineLabel.Size = New System.Drawing.Size(123, 15)
+        Me.ItemNineLabel.TabIndex = 28
+        Me.ItemNineLabel.Text = "seventten fortie wallet"
         '
         'Label23
         '
@@ -979,14 +832,14 @@ Partial Class Form1
         Me.ItemSubtractSides.Text = "-"
         Me.ItemSubtractSides.UseVisualStyleBackColor = True
         '
-        'Label26
+        'ItemEightLabel
         '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(277, 197)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(57, 15)
-        Me.Label26.TabIndex = 18
-        Me.Label26.Text = "tree fiddy"
+        Me.ItemEightLabel.AutoSize = True
+        Me.ItemEightLabel.Location = New System.Drawing.Point(277, 197)
+        Me.ItemEightLabel.Name = "ItemEightLabel"
+        Me.ItemEightLabel.Size = New System.Drawing.Size(57, 15)
+        Me.ItemEightLabel.TabIndex = 18
+        Me.ItemEightLabel.Text = "tree fiddy"
         '
         'ItemAddSides
         '
@@ -998,14 +851,14 @@ Partial Class Form1
         Me.ItemAddSides.Text = "+"
         Me.ItemAddSides.UseVisualStyleBackColor = True
         '
-        'Label30
+        'ItemSevenLabel
         '
-        Me.Label30.AutoSize = True
-        Me.Label30.Location = New System.Drawing.Point(81, 197)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(109, 15)
-        Me.Label30.TabIndex = 17
-        Me.Label30.Text = "wun hunnid dollars"
+        Me.ItemSevenLabel.AutoSize = True
+        Me.ItemSevenLabel.Location = New System.Drawing.Point(81, 197)
+        Me.ItemSevenLabel.Name = "ItemSevenLabel"
+        Me.ItemSevenLabel.Size = New System.Drawing.Size(109, 15)
+        Me.ItemSevenLabel.TabIndex = 17
+        Me.ItemSevenLabel.Text = "wun hunnid dollars"
         '
         'ButtonFruitSalad
         '
@@ -1035,6 +888,177 @@ Partial Class Form1
         Me.Label32.TabIndex = 20
         Me.Label32.Text = "Vegetable Salad"
         '
+        'PanelOrderDetails
+        '
+        Me.PanelOrderDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelOrderDetails.Controls.Add(Me.WriteReceipt)
+        Me.PanelOrderDetails.Controls.Add(Me.ButtonEmailReceipt)
+        Me.PanelOrderDetails.Controls.Add(Me.ListBoxReceipt)
+        Me.PanelOrderDetails.Controls.Add(Me.ButtonSubmit)
+        Me.PanelOrderDetails.Controls.Add(Me.LabelFinalPrice)
+        Me.PanelOrderDetails.Controls.Add(Me.Label18)
+        Me.PanelOrderDetails.Controls.Add(Me.TextBoxNameCredit)
+        Me.PanelOrderDetails.Controls.Add(Me.Label17)
+        Me.PanelOrderDetails.Controls.Add(Me.Label16)
+        Me.PanelOrderDetails.Controls.Add(Me.TextBoxCVV)
+        Me.PanelOrderDetails.Controls.Add(Me.TextBoxCreditNumber)
+        Me.PanelOrderDetails.Controls.Add(Me.LabelTotalPrice)
+        Me.PanelOrderDetails.Controls.Add(Me.Label14)
+        Me.PanelOrderDetails.Controls.Add(Me.ComboBoxPayment)
+        Me.PanelOrderDetails.Location = New System.Drawing.Point(206, 89)
+        Me.PanelOrderDetails.Name = "PanelOrderDetails"
+        Me.PanelOrderDetails.Size = New System.Drawing.Size(959, 518)
+        Me.PanelOrderDetails.TabIndex = 6
+        '
+        'WriteReceipt
+        '
+        Me.WriteReceipt.Location = New System.Drawing.Point(419, 329)
+        Me.WriteReceipt.Name = "WriteReceipt"
+        Me.WriteReceipt.Size = New System.Drawing.Size(212, 75)
+        Me.WriteReceipt.TabIndex = 15
+        Me.WriteReceipt.Text = "Write Receipt To Order History"
+        Me.WriteReceipt.UseVisualStyleBackColor = True
+        '
+        'ButtonEmailReceipt
+        '
+        Me.ButtonEmailReceipt.Location = New System.Drawing.Point(419, 410)
+        Me.ButtonEmailReceipt.Name = "ButtonEmailReceipt"
+        Me.ButtonEmailReceipt.Size = New System.Drawing.Size(212, 75)
+        Me.ButtonEmailReceipt.TabIndex = 14
+        Me.ButtonEmailReceipt.Text = "Send Receipt To Email"
+        Me.ButtonEmailReceipt.UseVisualStyleBackColor = True
+        '
+        'ListBoxReceipt
+        '
+        Me.ListBoxReceipt.Enabled = False
+        Me.ListBoxReceipt.FormattingEnabled = True
+        Me.ListBoxReceipt.ItemHeight = 15
+        Me.ListBoxReceipt.Items.AddRange(New Object() {"Receipt"})
+        Me.ListBoxReceipt.Location = New System.Drawing.Point(637, 16)
+        Me.ListBoxReceipt.Name = "ListBoxReceipt"
+        Me.ListBoxReceipt.Size = New System.Drawing.Size(284, 469)
+        Me.ListBoxReceipt.TabIndex = 13
+        '
+        'ButtonSubmit
+        '
+        Me.ButtonSubmit.Location = New System.Drawing.Point(112, 212)
+        Me.ButtonSubmit.Name = "ButtonSubmit"
+        Me.ButtonSubmit.Size = New System.Drawing.Size(151, 40)
+        Me.ButtonSubmit.TabIndex = 12
+        Me.ButtonSubmit.Text = "Submit"
+        Me.ButtonSubmit.UseVisualStyleBackColor = True
+        '
+        'LabelFinalPrice
+        '
+        Me.LabelFinalPrice.AutoSize = True
+        Me.LabelFinalPrice.Location = New System.Drawing.Point(10, 242)
+        Me.LabelFinalPrice.Name = "LabelFinalPrice"
+        Me.LabelFinalPrice.Size = New System.Drawing.Size(58, 15)
+        Me.LabelFinalPrice.TabIndex = 11
+        Me.LabelFinalPrice.Text = "FinalPrice"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(10, 63)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(96, 15)
+        Me.Label18.TabIndex = 8
+        Me.Label18.Text = "NAME ON CARD"
+        '
+        'TextBoxNameCredit
+        '
+        Me.TextBoxNameCredit.Location = New System.Drawing.Point(10, 79)
+        Me.TextBoxNameCredit.Name = "TextBoxNameCredit"
+        Me.TextBoxNameCredit.Size = New System.Drawing.Size(121, 23)
+        Me.TextBoxNameCredit.TabIndex = 7
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(8, 110)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(130, 15)
+        Me.Label17.TabIndex = 6
+        Me.Label17.Text = "CREDIT CARD NUMBER"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(10, 160)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(29, 15)
+        Me.Label16.TabIndex = 5
+        Me.Label16.Text = "CVV"
+        '
+        'TextBoxCVV
+        '
+        Me.TextBoxCVV.Location = New System.Drawing.Point(10, 178)
+        Me.TextBoxCVV.Name = "TextBoxCVV"
+        Me.TextBoxCVV.Size = New System.Drawing.Size(100, 23)
+        Me.TextBoxCVV.TabIndex = 4
+        '
+        'TextBoxCreditNumber
+        '
+        Me.TextBoxCreditNumber.Location = New System.Drawing.Point(10, 128)
+        Me.TextBoxCreditNumber.Name = "TextBoxCreditNumber"
+        Me.TextBoxCreditNumber.Size = New System.Drawing.Size(219, 23)
+        Me.TextBoxCreditNumber.TabIndex = 3
+        '
+        'LabelTotalPrice
+        '
+        Me.LabelTotalPrice.AutoSize = True
+        Me.LabelTotalPrice.Location = New System.Drawing.Point(10, 217)
+        Me.LabelTotalPrice.Name = "LabelTotalPrice"
+        Me.LabelTotalPrice.Size = New System.Drawing.Size(58, 15)
+        Me.LabelTotalPrice.TabIndex = 2
+        Me.LabelTotalPrice.Text = "TotalPrice"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(10, 16)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(111, 15)
+        Me.Label14.TabIndex = 1
+        Me.Label14.Text = "PAYMENT METHOD"
+        '
+        'ComboBoxPayment
+        '
+        Me.ComboBoxPayment.FormattingEnabled = True
+        Me.ComboBoxPayment.Items.AddRange(New Object() {"CASH", "CREDIT"})
+        Me.ComboBoxPayment.Location = New System.Drawing.Point(8, 37)
+        Me.ComboBoxPayment.Name = "ComboBoxPayment"
+        Me.ComboBoxPayment.Size = New System.Drawing.Size(121, 23)
+        Me.ComboBoxPayment.TabIndex = 0
+        '
+        'PanelOrderHistory
+        '
+        Me.PanelOrderHistory.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelOrderHistory.Controls.Add(Me.Label12)
+        Me.PanelOrderHistory.Location = New System.Drawing.Point(206, 89)
+        Me.PanelOrderHistory.Name = "PanelOrderHistory"
+        Me.PanelOrderHistory.Size = New System.Drawing.Size(957, 518)
+        Me.PanelOrderHistory.TabIndex = 7
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(348, 183)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(75, 15)
+        Me.Label12.TabIndex = 0
+        Me.Label12.Text = "OrderHistory"
+        '
+        'ButtonVoidItem
+        '
+        Me.ButtonVoidItem.Location = New System.Drawing.Point(220, 456)
+        Me.ButtonVoidItem.Name = "ButtonVoidItem"
+        Me.ButtonVoidItem.Size = New System.Drawing.Size(94, 48)
+        Me.ButtonVoidItem.TabIndex = 11
+        Me.ButtonVoidItem.Text = "VOID"
+        Me.ButtonVoidItem.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1043,12 +1067,12 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1276, 624)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
-        Me.Controls.Add(Me.PanelSides)
-        Me.Controls.Add(Me.PanelOrderHistory)
         Me.Controls.Add(Me.PanelFood)
         Me.Controls.Add(Me.PanelOrderDetails)
         Me.Controls.Add(Me.PanelNewOrder)
         Me.Controls.Add(Me.PanelDrinks)
+        Me.Controls.Add(Me.PanelSides)
+        Me.Controls.Add(Me.PanelOrderHistory)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1125,16 +1149,13 @@ Partial Class Form1
     Friend WithEvents Label10 As Label
     Friend WithEvents ButtonFish As Button
     Friend WithEvents Label14 As Label
-    Friend WithEvents ComboBoxPayment As ComboBox
-    Friend WithEvents TextBoxCRYPTO As TextBox
-    Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents TextBoxNameCredit As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents TextBoxCVV As TextBox
     Friend WithEvents TextBoxCreditNumber As TextBox
-    Friend WithEvents Label15 As Label
+    Friend WithEvents LabelTotalPrice As Label
     Friend WithEvents ItemVoidDrinks As Button
     Friend WithEvents Label22 As Label
     Friend WithEvents ButtonFruitPunch As Button
@@ -1148,21 +1169,26 @@ Partial Class Form1
     Friend WithEvents ButtonAlmondMilk As Button
     Friend WithEvents Label29 As Label
     Friend WithEvents ButtonVegetableSmoothie As Button
-    Friend WithEvents ItemSevenLabel As Label
     Friend WithEvents ItemSixLabel As Label
     Friend WithEvents ItemVoidSides As Button
     Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
+    Friend WithEvents ItemNineLabel As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents ButtonBoneMarrow As Button
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents ButtonVegetableSalad As Button
     Friend WithEvents ItemSubtractSides As Button
-    Friend WithEvents Label26 As Label
+    Friend WithEvents ItemEightLabel As Label
     Friend WithEvents ItemAddSides As Button
-    Friend WithEvents Label30 As Label
+    Friend WithEvents ItemSevenLabel As Label
     Friend WithEvents ButtonFruitSalad As Button
     Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
+    Friend WithEvents WriteReceipt As Button
+    Friend WithEvents ButtonEmailReceipt As Button
+    Friend WithEvents ListBoxReceipt As ListBox
+    Friend WithEvents ButtonSubmit As Button
+    Friend WithEvents LabelFinalPrice As Label
+    Public WithEvents ComboBoxPayment As ComboBox
 End Class
