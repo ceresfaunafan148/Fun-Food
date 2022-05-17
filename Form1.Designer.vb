@@ -86,16 +86,16 @@ Partial Class Form1
         Me.PanelSides = New System.Windows.Forms.Panel()
         Me.ItemVoidSides = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.ItemNineLabel = New System.Windows.Forms.Label()
+        Me.ItemTenLabel = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.ButtonBoneMarrow = New System.Windows.Forms.Button()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.ButtonVegetableSalad = New System.Windows.Forms.Button()
         Me.ItemSubtractSides = New System.Windows.Forms.Button()
-        Me.ItemEightLabel = New System.Windows.Forms.Label()
+        Me.ItemNineLabel = New System.Windows.Forms.Label()
         Me.ItemAddSides = New System.Windows.Forms.Button()
-        Me.ItemSevenLabel = New System.Windows.Forms.Label()
+        Me.ItemEightLabel = New System.Windows.Forms.Label()
         Me.ButtonFruitSalad = New System.Windows.Forms.Button()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -455,8 +455,9 @@ Partial Class Form1
         Me.ItemThreeLabel.BackColor = System.Drawing.SystemColors.HighlightText
         Me.ItemThreeLabel.Location = New System.Drawing.Point(469, 220)
         Me.ItemThreeLabel.Name = "ItemThreeLabel"
-        Me.ItemThreeLabel.Size = New System.Drawing.Size(0, 15)
+        Me.ItemThreeLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemThreeLabel.TabIndex = 11
+        Me.ItemThreeLabel.Text = "0"
         '
         'Label13
         '
@@ -491,8 +492,9 @@ Partial Class Form1
         Me.ItemTwoLabel.BackColor = System.Drawing.SystemColors.HighlightText
         Me.ItemTwoLabel.Location = New System.Drawing.Point(274, 217)
         Me.ItemTwoLabel.Name = "ItemTwoLabel"
-        Me.ItemTwoLabel.Size = New System.Drawing.Size(0, 15)
+        Me.ItemTwoLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemTwoLabel.TabIndex = 10
+        Me.ItemTwoLabel.Text = "0"
         '
         'ItemOneLabel
         '
@@ -500,8 +502,9 @@ Partial Class Form1
         Me.ItemOneLabel.BackColor = System.Drawing.SystemColors.HighlightText
         Me.ItemOneLabel.Location = New System.Drawing.Point(81, 220)
         Me.ItemOneLabel.Name = "ItemOneLabel"
-        Me.ItemOneLabel.Size = New System.Drawing.Size(0, 15)
+        Me.ItemOneLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemOneLabel.TabIndex = 7
+        Me.ItemOneLabel.Text = "0"
         '
         'ButtonChicken
         '
@@ -652,7 +655,6 @@ Partial Class Form1
         '
         'ButtonFruitPunch
         '
-        Me.ButtonFruitPunch.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonFruitPunch.Location = New System.Drawing.Point(212, 24)
         Me.ButtonFruitPunch.Name = "ButtonFruitPunch"
         Me.ButtonFruitPunch.Size = New System.Drawing.Size(182, 178)
@@ -699,7 +701,6 @@ Partial Class Form1
         '
         'ButtonWater
         '
-        Me.ButtonWater.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonWater.Location = New System.Drawing.Point(10, 24)
         Me.ButtonWater.Name = "ButtonWater"
         Me.ButtonWater.Size = New System.Drawing.Size(182, 178)
@@ -730,16 +731,16 @@ Partial Class Form1
         Me.PanelSides.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.PanelSides.Controls.Add(Me.ItemVoidSides)
         Me.PanelSides.Controls.Add(Me.Label20)
-        Me.PanelSides.Controls.Add(Me.ItemNineLabel)
+        Me.PanelSides.Controls.Add(Me.ItemTenLabel)
         Me.PanelSides.Controls.Add(Me.Label23)
         Me.PanelSides.Controls.Add(Me.ButtonBoneMarrow)
         Me.PanelSides.Controls.Add(Me.Label24)
         Me.PanelSides.Controls.Add(Me.Label25)
         Me.PanelSides.Controls.Add(Me.ButtonVegetableSalad)
         Me.PanelSides.Controls.Add(Me.ItemSubtractSides)
-        Me.PanelSides.Controls.Add(Me.ItemEightLabel)
+        Me.PanelSides.Controls.Add(Me.ItemNineLabel)
         Me.PanelSides.Controls.Add(Me.ItemAddSides)
-        Me.PanelSides.Controls.Add(Me.ItemSevenLabel)
+        Me.PanelSides.Controls.Add(Me.ItemEightLabel)
         Me.PanelSides.Controls.Add(Me.ButtonFruitSalad)
         Me.PanelSides.Controls.Add(Me.Label31)
         Me.PanelSides.Controls.Add(Me.Label32)
@@ -766,14 +767,14 @@ Partial Class Form1
         Me.Label20.Size = New System.Drawing.Size(0, 15)
         Me.Label20.TabIndex = 25
         '
-        'ItemNineLabel
+        'ItemTenLabel
         '
-        Me.ItemNineLabel.AutoSize = True
-        Me.ItemNineLabel.Location = New System.Drawing.Point(429, 197)
-        Me.ItemNineLabel.Name = "ItemNineLabel"
-        Me.ItemNineLabel.Size = New System.Drawing.Size(123, 15)
-        Me.ItemNineLabel.TabIndex = 28
-        Me.ItemNineLabel.Text = "seventten fortie wallet"
+        Me.ItemTenLabel.AutoSize = True
+        Me.ItemTenLabel.Location = New System.Drawing.Point(429, 197)
+        Me.ItemTenLabel.Name = "ItemTenLabel"
+        Me.ItemTenLabel.Size = New System.Drawing.Size(13, 15)
+        Me.ItemTenLabel.TabIndex = 28
+        Me.ItemTenLabel.Text = "0"
         '
         'Label23
         '
@@ -786,7 +787,6 @@ Partial Class Form1
         '
         'ButtonBoneMarrow
         '
-        Me.ButtonBoneMarrow.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonBoneMarrow.Location = New System.Drawing.Point(400, 16)
         Me.ButtonBoneMarrow.Name = "ButtonBoneMarrow"
         Me.ButtonBoneMarrow.Size = New System.Drawing.Size(182, 178)
@@ -814,7 +814,6 @@ Partial Class Form1
         '
         'ButtonVegetableSalad
         '
-        Me.ButtonVegetableSalad.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonVegetableSalad.Location = New System.Drawing.Point(212, 16)
         Me.ButtonVegetableSalad.Name = "ButtonVegetableSalad"
         Me.ButtonVegetableSalad.Size = New System.Drawing.Size(182, 178)
@@ -832,14 +831,14 @@ Partial Class Form1
         Me.ItemSubtractSides.Text = "-"
         Me.ItemSubtractSides.UseVisualStyleBackColor = True
         '
-        'ItemEightLabel
+        'ItemNineLabel
         '
-        Me.ItemEightLabel.AutoSize = True
-        Me.ItemEightLabel.Location = New System.Drawing.Point(277, 197)
-        Me.ItemEightLabel.Name = "ItemEightLabel"
-        Me.ItemEightLabel.Size = New System.Drawing.Size(57, 15)
-        Me.ItemEightLabel.TabIndex = 18
-        Me.ItemEightLabel.Text = "tree fiddy"
+        Me.ItemNineLabel.AutoSize = True
+        Me.ItemNineLabel.Location = New System.Drawing.Point(277, 197)
+        Me.ItemNineLabel.Name = "ItemNineLabel"
+        Me.ItemNineLabel.Size = New System.Drawing.Size(13, 15)
+        Me.ItemNineLabel.TabIndex = 18
+        Me.ItemNineLabel.Text = "0"
         '
         'ItemAddSides
         '
@@ -851,18 +850,17 @@ Partial Class Form1
         Me.ItemAddSides.Text = "+"
         Me.ItemAddSides.UseVisualStyleBackColor = True
         '
-        'ItemSevenLabel
+        'ItemEightLabel
         '
-        Me.ItemSevenLabel.AutoSize = True
-        Me.ItemSevenLabel.Location = New System.Drawing.Point(81, 197)
-        Me.ItemSevenLabel.Name = "ItemSevenLabel"
-        Me.ItemSevenLabel.Size = New System.Drawing.Size(109, 15)
-        Me.ItemSevenLabel.TabIndex = 17
-        Me.ItemSevenLabel.Text = "wun hunnid dollars"
+        Me.ItemEightLabel.AutoSize = True
+        Me.ItemEightLabel.Location = New System.Drawing.Point(81, 197)
+        Me.ItemEightLabel.Name = "ItemEightLabel"
+        Me.ItemEightLabel.Size = New System.Drawing.Size(13, 15)
+        Me.ItemEightLabel.TabIndex = 17
+        Me.ItemEightLabel.Text = "0"
         '
         'ButtonFruitSalad
         '
-        Me.ButtonFruitSalad.Image = Global.PetCafe.My.Resources.Resources.Kibble
         Me.ButtonFruitSalad.Location = New System.Drawing.Point(10, 16)
         Me.ButtonFruitSalad.Name = "ButtonFruitSalad"
         Me.ButtonFruitSalad.Size = New System.Drawing.Size(182, 178)
@@ -1067,12 +1065,12 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1276, 624)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
+        Me.Controls.Add(Me.PanelSides)
+        Me.Controls.Add(Me.PanelOrderHistory)
         Me.Controls.Add(Me.PanelFood)
         Me.Controls.Add(Me.PanelOrderDetails)
         Me.Controls.Add(Me.PanelNewOrder)
         Me.Controls.Add(Me.PanelDrinks)
-        Me.Controls.Add(Me.PanelSides)
-        Me.Controls.Add(Me.PanelOrderHistory)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1172,16 +1170,16 @@ Partial Class Form1
     Friend WithEvents ItemSixLabel As Label
     Friend WithEvents ItemVoidSides As Button
     Friend WithEvents Label20 As Label
-    Friend WithEvents ItemNineLabel As Label
+    Friend WithEvents ItemTenLabel As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents ButtonBoneMarrow As Button
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
     Friend WithEvents ButtonVegetableSalad As Button
     Friend WithEvents ItemSubtractSides As Button
-    Friend WithEvents ItemEightLabel As Label
+    Friend WithEvents ItemNineLabel As Label
     Friend WithEvents ItemAddSides As Button
-    Friend WithEvents ItemSevenLabel As Label
+    Friend WithEvents ItemEightLabel As Label
     Friend WithEvents ButtonFruitSalad As Button
     Friend WithEvents Label31 As Label
     Friend WithEvents Label32 As Label
@@ -1191,4 +1189,5 @@ Partial Class Form1
     Friend WithEvents ButtonSubmit As Button
     Friend WithEvents LabelFinalPrice As Label
     Public WithEvents ComboBoxPayment As ComboBox
+    Friend WithEvents ne As Label
 End Class

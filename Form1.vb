@@ -107,26 +107,16 @@
 
     Private Sub ItemSubtractFood_Click(sender As Object, e As EventArgs) Handles ItemSubtractFood.Click
 
-        If ButtonGrain.Enabled = False Then
+        If ButtonGrain.Enabled = False And Not ItemQuantity(0) = 0 Then
             ItemQuantity(0) = ItemQuantity(0) - 1
             ItemOneLabel.Text = (Convert.ToString(ItemQuantity(0)))
-        ElseIf ButtonChicken.Enabled = False Then
+        ElseIf ButtonChicken.Enabled = False And Not ItemQuantity(1) = 0 Then
             ItemQuantity(1) = ItemQuantity(1) - 1
             ItemTwoLabel.Text = (Convert.ToString(ItemQuantity(1)))
-        ElseIf ButtonFish.Enabled = False Then
+        ElseIf ButtonFish.Enabled = False And Not ItemQuantity(2) = 0 Then
             ItemQuantity(2) = ItemQuantity(2) - 1
             ItemThreeLabel.Text = (Convert.ToString(ItemQuantity(2)))
-
-            Next If ItemQuantity(0) = 0 Then
-            ItemQuantity(0) = ItemQuantity(0) + 1
         End If
-        If ItemQuantity(1) = 0 Then
-            ItemQuantity(1) = ItemQuantity(1) + 1
-        End If
-        If ItemQuantity(2) = 0 Then
-            ItemQuantity(2) = ItemQuantity(2) + 1
-        End If
-
 
     End Sub
 
@@ -182,36 +172,23 @@
             ItemSixLabel.Text = (Convert.ToString(ItemQuantity(5)))
         ElseIf ButtonVegetableSmoothie.Enabled = False Then
             ItemQuantity(6) = ItemQuantity(6) + 1
-            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(6)))
         End If
     End Sub
 
     Private Sub ItemSubtractDrinks_Click(sender As Object, e As EventArgs) Handles ItemSubtractDrinks.Click
-        If ButtonWater.Enabled = False Then
+        If ButtonWater.Enabled = False And Not ItemQuantity(3) = 0 Then
             ItemQuantity(3) = ItemQuantity(3) - 1
             ItemFourLabel.Text = (Convert.ToString(ItemQuantity(3)))
-        ElseIf ButtonFruitPunch.Enabled = False Then
+        ElseIf ButtonFruitPunch.Enabled = False And Not ItemQuantity(4) = 0 Then
             ItemQuantity(4) = ItemQuantity(4) - 1
             ItemFiveLabel.Text = (Convert.ToString(ItemQuantity(4)))
-        ElseIf ButtonAlmondMilk.Enabled = False Then
+        ElseIf ButtonAlmondMilk.Enabled = False And Not ItemQuantity(5) = 0 Then
             ItemQuantity(5) = ItemQuantity(5) - 1
             ItemSixLabel.Text = (Convert.ToString(ItemQuantity(5)))
-        ElseIf ButtonVegetableSmoothie.Enabled = False Then
+        ElseIf ButtonVegetableSmoothie.Enabled = False And Not ItemQuantity(6) = 0 Then
             ItemQuantity(6) = ItemQuantity(6) - 1
-            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
-        End If
-
-        If ItemQuantity(3) = 0 Then
-            ItemQuantity(3) = ItemQuantity(3) + 1
-        End If
-        If ItemQuantity(4) = 0 Then
-            ItemQuantity(4) = ItemQuantity(4) + 1
-        End If
-        If ItemQuantity(5) = 0 Then
-            ItemQuantity(5) = ItemQuantity(5) + 1
-        End If
-        If ItemQuantity(6) = 0 Then
-            ItemQuantity(6) = ItemQuantity(6) + 1
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(6)))
         End If
     End Sub
 
@@ -227,85 +204,61 @@
             ItemSixLabel.Text = (Convert.ToString(ItemQuantity(5)))
         ElseIf ButtonVegetableSmoothie.Enabled = False Then
             ItemQuantity(6) = 0
-            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(6)))
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(6)))
         End If
     End Sub
 
     Private Sub ItemAddSides_Click(sender As Object, e As EventArgs) Handles ItemAddSides.Click
         If ButtonFruitSalad.Enabled = False Then
             ItemQuantity(7) = ItemQuantity(7) + 1
-            ItemFourLabel.Text = (Convert.ToString(ItemQuantity(7)))
+            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(7)))
         ElseIf ButtonVegetableSalad.Enabled = False Then
             ItemQuantity(8) = ItemQuantity(8) + 1
-            ItemFiveLabel.Text = (Convert.ToString(ItemQuantity(8)))
+            ItemTenLabel.Text = (Convert.ToString(ItemQuantity(8)))
         ElseIf ButtonBoneMarrow.Enabled = False Then
             ItemQuantity(9) = ItemQuantity(9) + 1
-            ItemSixLabel.Text = (Convert.ToString(ItemQuantity(9)))
+            ItemTenLabel.Text = (Convert.ToString(ItemQuantity(9)))
         End If
     End Sub
 
     Private Sub ItemSubtractSides_Click(sender As Object, e As EventArgs) Handles ItemSubtractSides.Click
-        If ButtonFruitSalad.Enabled = False Then
-            ItemQuantity(7) = ItemQuantity(7) - 1
-            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(7)))
-        ElseIf ButtonVegetableSalad.Enabled = False Then
-            ItemQuantity(8) = ItemQuantity(8) - 1
-            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(8)))
-        ElseIf ButtonBoneMarrow.Enabled = False Then
-            ItemQuantity(9) = ItemQuantity(9) - 1
-            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(9)))
-        End If
 
-        If ItemQuantity(7) = 0 Then
-            ItemQuantity(7) = ItemQuantity(7) + 1
-        End If
-        If ItemQuantity(8) = 0 Then
-            ItemQuantity(8) = ItemQuantity(8) + 1
-        End If
-        If ItemQuantity(9) = 0 Then
-            ItemQuantity(9) = ItemQuantity(9) + 1
+        If ButtonFruitSalad.Enabled = False And Not ItemQuantity(7) = 0 Then
+            ItemQuantity(7) = ItemQuantity(7) - 1
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(7)))
+        ElseIf ButtonVegetableSalad.Enabled = False And Not ItemQuantity(7) = 0 Then
+            ItemQuantity(8) = ItemQuantity(8) - 1
+            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(8)))
+        ElseIf ButtonBoneMarrow.Enabled = False And Not ItemQuantity(9) = 0 Then
+            ItemQuantity(9) = ItemQuantity(9) - 1
+            ItemTenLabel.Text = (Convert.ToString(ItemQuantity(9)))
         End If
     End Sub
 
     Private Sub ItemVoidSides_Click(sender As Object, e As EventArgs) Handles ItemVoidSides.Click
         If ButtonFruitSalad.Enabled = False Then
             ItemQuantity(7) = 0
-            ItemSevenLabel.Text = (Convert.ToString(ItemQuantity(7)))
+            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(7)))
         ElseIf ButtonChicken.Enabled = False Then
             ItemQuantity(8) = 0
-            ItemEightLabel.Text = (Convert.ToString(ItemQuantity(8)))
+            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(8)))
         ElseIf ButtonFish.Enabled = False Then
             ItemQuantity(9) = 0
-            ItemNineLabel.Text = (Convert.ToString(ItemQuantity(9)))
+            ItemTenLabel.Text = (Convert.ToString(ItemQuantity(9)))
         End If
     End Sub
 
     Private Sub ButtonSubmit_Click(sender As Object, e As EventArgs) Handles ButtonSubmit.Click
         ListBoxReceipt.Items.Add("PAYMENT METHOD: " + ComboBoxPayment.SelectedItem)
-        ListBoxReceipt.Items.Add("CUSTOMER NAME: " + TextBoxName)
+        ListBoxReceipt.Items.Add("CUSTOMER NAME: " + TextBoxName.Text)
         ListBoxReceipt.Items.Add("===================================")
         If ButtonDelivery.Enabled = False Then
-            ListBox.Receipt.Items.Add("PHONE: " + TextBoxPhoneNumber.Text)
-            ListBox.Receipt.Items.Add("EMAIL: " + TextBoxEmail.Text)
+            ListBoxReceipt.Items.Add("PHONE: " + TextBoxPhoneNumber.Text)
+            ListBoxReceipt.Items.Add("EMAIL: " + TextBoxEmail.Text)
             ListBoxReceipt.Items.Add("ADDRESS: " + TextBoxUnitNumber.Text + TextBoxStreetNumber.Text + TextBoxSuburb.Text + TextBoxPostCode.Text)
             'Add try catches for literally everything
         End If
-        Dim ItemName(9) As String 'This array stores the names of all items 
+        Dim ItemName(9) As Char 'This array stores the names of all items 
         ' local variable definition 
-        ItemName(0) = Grain
-        ItemName(1) = Chicken
-        ItemName(2) = Fish
-        ItemName(3) = Water
-        ItemName(4) = Fruit Punch
-        ItemName(5) = Almond Milk
-        ItemName(6) = Vegetable Smoothie
-        ItemName(7) = Fruit Salad
-        ItemName(8) = Vegetable Salad
-        ItemName(9) = Bone Marrow 
-     
-
     End Sub
-    End Module
-    End Sub
-
 End Class
