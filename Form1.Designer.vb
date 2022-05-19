@@ -69,6 +69,7 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.PanelDrinks = New System.Windows.Forms.Panel()
+        Me.ItemSevenLabel = New System.Windows.Forms.Label()
         Me.ItemSixLabel = New System.Windows.Forms.Label()
         Me.Label29 = New System.Windows.Forms.Label()
         Me.ButtonVegetableSmoothie = New System.Windows.Forms.Button()
@@ -583,6 +584,7 @@ Partial Class Form1
         'PanelDrinks
         '
         Me.PanelDrinks.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelDrinks.Controls.Add(Me.ItemSevenLabel)
         Me.PanelDrinks.Controls.Add(Me.ItemSixLabel)
         Me.PanelDrinks.Controls.Add(Me.Label29)
         Me.PanelDrinks.Controls.Add(Me.ButtonVegetableSmoothie)
@@ -602,13 +604,23 @@ Partial Class Form1
         Me.PanelDrinks.Size = New System.Drawing.Size(957, 518)
         Me.PanelDrinks.TabIndex = 4
         '
+        'ItemSevenLabel
+        '
+        Me.ItemSevenLabel.AutoSize = True
+        Me.ItemSevenLabel.Location = New System.Drawing.Point(693, 207)
+        Me.ItemSevenLabel.Name = "ItemSevenLabel"
+        Me.ItemSevenLabel.Size = New System.Drawing.Size(13, 15)
+        Me.ItemSevenLabel.TabIndex = 34
+        Me.ItemSevenLabel.Text = "0"
+        '
         'ItemSixLabel
         '
         Me.ItemSixLabel.AutoSize = True
         Me.ItemSixLabel.Location = New System.Drawing.Point(469, 207)
         Me.ItemSixLabel.Name = "ItemSixLabel"
-        Me.ItemSixLabel.Size = New System.Drawing.Size(0, 15)
+        Me.ItemSixLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemSixLabel.TabIndex = 33
+        Me.ItemSixLabel.Text = "0"
         '
         'Label29
         '
@@ -677,8 +689,9 @@ Partial Class Form1
         Me.ItemFiveLabel.AutoSize = True
         Me.ItemFiveLabel.Location = New System.Drawing.Point(277, 205)
         Me.ItemFiveLabel.Name = "ItemFiveLabel"
-        Me.ItemFiveLabel.Size = New System.Drawing.Size(0, 15)
+        Me.ItemFiveLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemFiveLabel.TabIndex = 18
+        Me.ItemFiveLabel.Text = "0"
         '
         'ItemAddDrinks
         '
@@ -696,8 +709,9 @@ Partial Class Form1
         Me.ItemFourLabel.AutoSize = True
         Me.ItemFourLabel.Location = New System.Drawing.Point(81, 205)
         Me.ItemFourLabel.Name = "ItemFourLabel"
-        Me.ItemFourLabel.Size = New System.Drawing.Size(0, 15)
+        Me.ItemFourLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemFourLabel.TabIndex = 17
+        Me.ItemFourLabel.Text = "0"
         '
         'ButtonWater
         '
@@ -1065,12 +1079,12 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1276, 624)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
+        Me.Controls.Add(Me.PanelDrinks)
         Me.Controls.Add(Me.PanelSides)
         Me.Controls.Add(Me.PanelOrderHistory)
         Me.Controls.Add(Me.PanelFood)
         Me.Controls.Add(Me.PanelOrderDetails)
         Me.Controls.Add(Me.PanelNewOrder)
-        Me.Controls.Add(Me.PanelDrinks)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1190,4 +1204,5 @@ Partial Class Form1
     Friend WithEvents LabelFinalPrice As Label
     Public WithEvents ComboBoxPayment As ComboBox
     Friend WithEvents ne As Label
+    Friend WithEvents ItemSevenLabel As Label
 End Class
