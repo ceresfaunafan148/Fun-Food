@@ -118,6 +118,9 @@ Partial Class Form1
         Me.PanelOrderHistory = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ButtonVoidItem = New System.Windows.Forms.Button()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.PanelNewOrder.SuspendLayout()
         Me.PanelTop.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
@@ -454,7 +457,7 @@ Partial Class Form1
         '
         Me.ItemThreeLabel.AutoSize = True
         Me.ItemThreeLabel.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.ItemThreeLabel.Location = New System.Drawing.Point(469, 220)
+        Me.ItemThreeLabel.Location = New System.Drawing.Point(618, 305)
         Me.ItemThreeLabel.Name = "ItemThreeLabel"
         Me.ItemThreeLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemThreeLabel.TabIndex = 11
@@ -463,16 +466,16 @@ Partial Class Form1
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(429, 202)
+        Me.Label13.Location = New System.Drawing.Point(606, 277)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(123, 15)
+        Me.Label13.Size = New System.Drawing.Size(34, 15)
         Me.Label13.TabIndex = 13
-        Me.Label13.Text = "seventten fortie wallet"
+        Me.Label13.Text = "$12.5"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(453, 6)
+        Me.Label10.Location = New System.Drawing.Point(597, 16)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 15)
         Me.Label10.TabIndex = 12
@@ -480,9 +483,10 @@ Partial Class Form1
         '
         'ButtonFish
         '
-        Me.ButtonFish.Location = New System.Drawing.Point(400, 21)
+        Me.ButtonFish.Image = Global.PetCafe.My.Resources.Resources.FishKibble
+        Me.ButtonFish.Location = New System.Drawing.Point(505, 37)
         Me.ButtonFish.Name = "ButtonFish"
-        Me.ButtonFish.Size = New System.Drawing.Size(182, 178)
+        Me.ButtonFish.Size = New System.Drawing.Size(254, 237)
         Me.ButtonFish.TabIndex = 11
         Me.ButtonFish.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ButtonFish.UseVisualStyleBackColor = True
@@ -491,7 +495,7 @@ Partial Class Form1
         '
         Me.ItemTwoLabel.AutoSize = True
         Me.ItemTwoLabel.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.ItemTwoLabel.Location = New System.Drawing.Point(274, 217)
+        Me.ItemTwoLabel.Location = New System.Drawing.Point(359, 305)
         Me.ItemTwoLabel.Name = "ItemTwoLabel"
         Me.ItemTwoLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemTwoLabel.TabIndex = 10
@@ -501,7 +505,7 @@ Partial Class Form1
         '
         Me.ItemOneLabel.AutoSize = True
         Me.ItemOneLabel.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.ItemOneLabel.Location = New System.Drawing.Point(81, 220)
+        Me.ItemOneLabel.Location = New System.Drawing.Point(125, 305)
         Me.ItemOneLabel.Name = "ItemOneLabel"
         Me.ItemOneLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemOneLabel.TabIndex = 7
@@ -509,9 +513,10 @@ Partial Class Form1
         '
         'ButtonChicken
         '
-        Me.ButtonChicken.Location = New System.Drawing.Point(212, 21)
+        Me.ButtonChicken.Image = Global.PetCafe.My.Resources.Resources.ChickenKibble
+        Me.ButtonChicken.Location = New System.Drawing.Point(258, 37)
         Me.ButtonChicken.Name = "ButtonChicken"
-        Me.ButtonChicken.Size = New System.Drawing.Size(182, 178)
+        Me.ButtonChicken.Size = New System.Drawing.Size(236, 237)
         Me.ButtonChicken.TabIndex = 4
         Me.ButtonChicken.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ButtonChicken.UseVisualStyleBackColor = True
@@ -529,11 +534,11 @@ Partial Class Form1
         'PriceChicken
         '
         Me.PriceChicken.AutoSize = True
-        Me.PriceChicken.Location = New System.Drawing.Point(277, 202)
+        Me.PriceChicken.Location = New System.Drawing.Point(359, 277)
         Me.PriceChicken.Name = "PriceChicken"
-        Me.PriceChicken.Size = New System.Drawing.Size(57, 15)
+        Me.PriceChicken.Size = New System.Drawing.Size(25, 15)
         Me.PriceChicken.TabIndex = 3
-        Me.PriceChicken.Text = "tree fiddy"
+        Me.PriceChicken.Text = "$11"
         '
         'ItemAddFood
         '
@@ -548,17 +553,18 @@ Partial Class Form1
         'PriceGrain
         '
         Me.PriceGrain.AutoSize = True
-        Me.PriceGrain.Location = New System.Drawing.Point(81, 202)
+        Me.PriceGrain.Location = New System.Drawing.Point(112, 282)
         Me.PriceGrain.Name = "PriceGrain"
-        Me.PriceGrain.Size = New System.Drawing.Size(109, 15)
+        Me.PriceGrain.Size = New System.Drawing.Size(34, 15)
         Me.PriceGrain.TabIndex = 2
-        Me.PriceGrain.Text = "wun hunnid dollars"
+        Me.PriceGrain.Text = "$10.5"
         '
         'ButtonGrain
         '
-        Me.ButtonGrain.Location = New System.Drawing.Point(10, 21)
+        Me.ButtonGrain.Image = Global.PetCafe.My.Resources.Resources.GrainKibble
+        Me.ButtonGrain.Location = New System.Drawing.Point(10, 37)
         Me.ButtonGrain.Name = "ButtonGrain"
-        Me.ButtonGrain.Size = New System.Drawing.Size(182, 178)
+        Me.ButtonGrain.Size = New System.Drawing.Size(236, 239)
         Me.ButtonGrain.TabIndex = 1
         Me.ButtonGrain.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ButtonGrain.UseVisualStyleBackColor = True
@@ -566,7 +572,7 @@ Partial Class Form1
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(70, 6)
+        Me.Label9.Location = New System.Drawing.Point(95, 16)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(71, 15)
         Me.Label9.TabIndex = 0
@@ -575,7 +581,7 @@ Partial Class Form1
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(259, 6)
+        Me.Label11.Location = New System.Drawing.Point(317, 16)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(86, 15)
         Me.Label11.TabIndex = 5
@@ -715,6 +721,7 @@ Partial Class Form1
         '
         'ButtonWater
         '
+        Me.ButtonWater.Image = Global.PetCafe.My.Resources.Resources.FruitSalad
         Me.ButtonWater.Location = New System.Drawing.Point(10, 24)
         Me.ButtonWater.Name = "ButtonWater"
         Me.ButtonWater.Size = New System.Drawing.Size(182, 178)
@@ -743,6 +750,9 @@ Partial Class Form1
         'PanelSides
         '
         Me.PanelSides.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelSides.Controls.Add(Me.Label21)
+        Me.PanelSides.Controls.Add(Me.Label19)
+        Me.PanelSides.Controls.Add(Me.Label15)
         Me.PanelSides.Controls.Add(Me.ItemVoidSides)
         Me.PanelSides.Controls.Add(Me.Label20)
         Me.PanelSides.Controls.Add(Me.ItemTenLabel)
@@ -784,7 +794,7 @@ Partial Class Form1
         'ItemTenLabel
         '
         Me.ItemTenLabel.AutoSize = True
-        Me.ItemTenLabel.Location = New System.Drawing.Point(429, 197)
+        Me.ItemTenLabel.Location = New System.Drawing.Point(736, 305)
         Me.ItemTenLabel.Name = "ItemTenLabel"
         Me.ItemTenLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemTenLabel.TabIndex = 28
@@ -793,7 +803,7 @@ Partial Class Form1
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(453, 1)
+        Me.Label23.Location = New System.Drawing.Point(707, -2)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(81, 15)
         Me.Label23.TabIndex = 27
@@ -801,9 +811,11 @@ Partial Class Form1
         '
         'ButtonBoneMarrow
         '
-        Me.ButtonBoneMarrow.Location = New System.Drawing.Point(400, 16)
+        Me.ButtonBoneMarrow.Image = Global.PetCafe.My.Resources.Resources.BoneMarrow
+        Me.ButtonBoneMarrow.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ButtonBoneMarrow.Location = New System.Drawing.Point(606, 16)
         Me.ButtonBoneMarrow.Name = "ButtonBoneMarrow"
-        Me.ButtonBoneMarrow.Size = New System.Drawing.Size(182, 178)
+        Me.ButtonBoneMarrow.Size = New System.Drawing.Size(284, 268)
         Me.ButtonBoneMarrow.TabIndex = 26
         Me.ButtonBoneMarrow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ButtonBoneMarrow.UseVisualStyleBackColor = True
@@ -828,9 +840,10 @@ Partial Class Form1
         '
         'ButtonVegetableSalad
         '
-        Me.ButtonVegetableSalad.Location = New System.Drawing.Point(212, 16)
+        Me.ButtonVegetableSalad.Image = Global.PetCafe.My.Resources.Resources.VegetableSalad
+        Me.ButtonVegetableSalad.Location = New System.Drawing.Point(306, 16)
         Me.ButtonVegetableSalad.Name = "ButtonVegetableSalad"
-        Me.ButtonVegetableSalad.Size = New System.Drawing.Size(182, 178)
+        Me.ButtonVegetableSalad.Size = New System.Drawing.Size(285, 268)
         Me.ButtonVegetableSalad.TabIndex = 19
         Me.ButtonVegetableSalad.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ButtonVegetableSalad.UseVisualStyleBackColor = True
@@ -848,7 +861,7 @@ Partial Class Form1
         'ItemNineLabel
         '
         Me.ItemNineLabel.AutoSize = True
-        Me.ItemNineLabel.Location = New System.Drawing.Point(277, 197)
+        Me.ItemNineLabel.Location = New System.Drawing.Point(433, 305)
         Me.ItemNineLabel.Name = "ItemNineLabel"
         Me.ItemNineLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemNineLabel.TabIndex = 18
@@ -867,7 +880,7 @@ Partial Class Form1
         'ItemEightLabel
         '
         Me.ItemEightLabel.AutoSize = True
-        Me.ItemEightLabel.Location = New System.Drawing.Point(81, 197)
+        Me.ItemEightLabel.Location = New System.Drawing.Point(137, 305)
         Me.ItemEightLabel.Name = "ItemEightLabel"
         Me.ItemEightLabel.Size = New System.Drawing.Size(13, 15)
         Me.ItemEightLabel.TabIndex = 17
@@ -875,9 +888,10 @@ Partial Class Form1
         '
         'ButtonFruitSalad
         '
+        Me.ButtonFruitSalad.Image = Global.PetCafe.My.Resources.Resources.FruitSalad
         Me.ButtonFruitSalad.Location = New System.Drawing.Point(10, 16)
         Me.ButtonFruitSalad.Name = "ButtonFruitSalad"
-        Me.ButtonFruitSalad.Size = New System.Drawing.Size(182, 178)
+        Me.ButtonFruitSalad.Size = New System.Drawing.Size(285, 268)
         Me.ButtonFruitSalad.TabIndex = 16
         Me.ButtonFruitSalad.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.ButtonFruitSalad.UseVisualStyleBackColor = True
@@ -885,7 +899,7 @@ Partial Class Form1
         'Label31
         '
         Me.Label31.AutoSize = True
-        Me.Label31.Location = New System.Drawing.Point(70, 1)
+        Me.Label31.Location = New System.Drawing.Point(114, 0)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(62, 15)
         Me.Label31.TabIndex = 15
@@ -894,7 +908,7 @@ Partial Class Form1
         'Label32
         '
         Me.Label32.AutoSize = True
-        Me.Label32.Location = New System.Drawing.Point(259, 1)
+        Me.Label32.Location = New System.Drawing.Point(414, 3)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(89, 15)
         Me.Label32.TabIndex = 20
@@ -1071,6 +1085,33 @@ Partial Class Form1
         Me.ButtonVoidItem.Text = "VOID"
         Me.ButtonVoidItem.UseVisualStyleBackColor = True
         '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(131, 287)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(19, 15)
+        Me.Label15.TabIndex = 30
+        Me.Label15.Text = "$8"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(419, 287)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(19, 15)
+        Me.Label19.TabIndex = 31
+        Me.Label19.Text = "$8"
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(717, 290)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(25, 15)
+        Me.Label21.TabIndex = 32
+        Me.Label21.Text = "$35"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -1079,12 +1120,12 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1276, 624)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
+        Me.Controls.Add(Me.PanelNewOrder)
         Me.Controls.Add(Me.PanelDrinks)
         Me.Controls.Add(Me.PanelSides)
         Me.Controls.Add(Me.PanelOrderHistory)
         Me.Controls.Add(Me.PanelFood)
         Me.Controls.Add(Me.PanelOrderDetails)
-        Me.Controls.Add(Me.PanelNewOrder)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1205,4 +1246,7 @@ Partial Class Form1
     Public WithEvents ComboBoxPayment As ComboBox
     Friend WithEvents ne As Label
     Friend WithEvents ItemSevenLabel As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label15 As Label
 End Class
