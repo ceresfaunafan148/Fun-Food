@@ -85,6 +85,9 @@ Partial Class Form1
         Me.Label27 = New System.Windows.Forms.Label()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.PanelSides = New System.Windows.Forms.Panel()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.ItemVoidSides = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.ItemTenLabel = New System.Windows.Forms.Label()
@@ -118,9 +121,6 @@ Partial Class Form1
         Me.PanelOrderHistory = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ButtonVoidItem = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.PanelNewOrder.SuspendLayout()
         Me.PanelTop.SuspendLayout()
         Me.PanelLeft.SuspendLayout()
@@ -134,7 +134,7 @@ Partial Class Form1
         'PanelNewOrder
         '
         Me.PanelNewOrder.AccessibleName = "wewe"
-        Me.PanelNewOrder.BackColor = System.Drawing.Color.Gainsboro
+        Me.PanelNewOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PanelNewOrder.Controls.Add(Me.TextBoxSuburb)
         Me.PanelNewOrder.Controls.Add(Me.Label8)
         Me.PanelNewOrder.Controls.Add(Me.Label7)
@@ -308,7 +308,7 @@ Partial Class Form1
         '
         'PanelTop
         '
-        Me.PanelTop.BackColor = System.Drawing.SystemColors.Info
+        Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.PanelTop.Controls.Add(Me.LabelTest)
         Me.PanelTop.Controls.Add(Me.ButtonRestart)
         Me.PanelTop.Controls.Add(Me.LabelTitle)
@@ -354,7 +354,7 @@ Partial Class Form1
         '
         'PanelLeft
         '
-        Me.PanelLeft.BackColor = System.Drawing.SystemColors.MenuBar
+        Me.PanelLeft.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PanelLeft.Controls.Add(Me.ButtonHistory)
         Me.PanelLeft.Controls.Add(Me.ButtonDetails)
         Me.PanelLeft.Controls.Add(Me.ButtonSides)
@@ -423,7 +423,7 @@ Partial Class Form1
         '
         'PanelFood
         '
-        Me.PanelFood.BackColor = System.Drawing.SystemColors.Control
+        Me.PanelFood.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PanelFood.Controls.Add(Me.ButtonVoidFood)
         Me.PanelFood.Controls.Add(Me.ItemThreeLabel)
         Me.PanelFood.Controls.Add(Me.Label13)
@@ -589,7 +589,7 @@ Partial Class Form1
         '
         'PanelDrinks
         '
-        Me.PanelDrinks.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelDrinks.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PanelDrinks.Controls.Add(Me.ItemSevenLabel)
         Me.PanelDrinks.Controls.Add(Me.ItemSixLabel)
         Me.PanelDrinks.Controls.Add(Me.Label29)
@@ -639,6 +639,7 @@ Partial Class Form1
         '
         'ButtonVegetableSmoothie
         '
+        Me.ButtonVegetableSmoothie.Image = Global.PetCafe.My.Resources.Resources.VegetableSmoothie
         Me.ButtonVegetableSmoothie.Location = New System.Drawing.Point(606, 24)
         Me.ButtonVegetableSmoothie.Name = "ButtonVegetableSmoothie"
         Me.ButtonVegetableSmoothie.Size = New System.Drawing.Size(182, 177)
@@ -647,6 +648,8 @@ Partial Class Form1
         '
         'ButtonAlmondMilk
         '
+        Me.ButtonAlmondMilk.Image = Global.PetCafe.My.Resources.Resources.AlmondMillk
+        Me.ButtonAlmondMilk.ImageAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.ButtonAlmondMilk.Location = New System.Drawing.Point(409, 24)
         Me.ButtonAlmondMilk.Name = "ButtonAlmondMilk"
         Me.ButtonAlmondMilk.Size = New System.Drawing.Size(182, 176)
@@ -673,6 +676,7 @@ Partial Class Form1
         '
         'ButtonFruitPunch
         '
+        Me.ButtonFruitPunch.Image = Global.PetCafe.My.Resources.Resources.FruitPunch
         Me.ButtonFruitPunch.Location = New System.Drawing.Point(212, 24)
         Me.ButtonFruitPunch.Name = "ButtonFruitPunch"
         Me.ButtonFruitPunch.Size = New System.Drawing.Size(182, 178)
@@ -721,7 +725,7 @@ Partial Class Form1
         '
         'ButtonWater
         '
-        Me.ButtonWater.Image = Global.PetCafe.My.Resources.Resources.FruitSalad
+        Me.ButtonWater.Image = Global.PetCafe.My.Resources.Resources.water
         Me.ButtonWater.Location = New System.Drawing.Point(10, 24)
         Me.ButtonWater.Name = "ButtonWater"
         Me.ButtonWater.Size = New System.Drawing.Size(182, 178)
@@ -749,7 +753,7 @@ Partial Class Form1
         '
         'PanelSides
         '
-        Me.PanelSides.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelSides.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PanelSides.Controls.Add(Me.Label21)
         Me.PanelSides.Controls.Add(Me.Label19)
         Me.PanelSides.Controls.Add(Me.Label15)
@@ -772,6 +776,33 @@ Partial Class Form1
         Me.PanelSides.Name = "PanelSides"
         Me.PanelSides.Size = New System.Drawing.Size(957, 518)
         Me.PanelSides.TabIndex = 5
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(717, 290)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(25, 15)
+        Me.Label21.TabIndex = 32
+        Me.Label21.Text = "$35"
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(419, 287)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(19, 15)
+        Me.Label19.TabIndex = 31
+        Me.Label19.Text = "$8"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(131, 287)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(19, 15)
+        Me.Label15.TabIndex = 30
+        Me.Label15.Text = "$8"
         '
         'ItemVoidSides
         '
@@ -916,7 +947,7 @@ Partial Class Form1
         '
         'PanelOrderDetails
         '
-        Me.PanelOrderDetails.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelOrderDetails.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.PanelOrderDetails.Controls.Add(Me.WriteReceipt)
         Me.PanelOrderDetails.Controls.Add(Me.ButtonEmailReceipt)
         Me.PanelOrderDetails.Controls.Add(Me.ListBoxReceipt)
@@ -1060,7 +1091,7 @@ Partial Class Form1
         '
         'PanelOrderHistory
         '
-        Me.PanelOrderHistory.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.PanelOrderHistory.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.PanelOrderHistory.Controls.Add(Me.Label12)
         Me.PanelOrderHistory.Location = New System.Drawing.Point(206, 89)
         Me.PanelOrderHistory.Name = "PanelOrderHistory"
@@ -1085,47 +1116,20 @@ Partial Class Form1
         Me.ButtonVoidItem.Text = "VOID"
         Me.ButtonVoidItem.UseVisualStyleBackColor = True
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(131, 287)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(19, 15)
-        Me.Label15.TabIndex = 30
-        Me.Label15.Text = "$8"
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(419, 287)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(19, 15)
-        Me.Label19.TabIndex = 31
-        Me.Label19.Text = "$8"
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(717, 290)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(25, 15)
-        Me.Label21.TabIndex = 32
-        Me.Label21.Text = "$35"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.Info
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1276, 624)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
+        Me.Controls.Add(Me.PanelOrderDetails)
         Me.Controls.Add(Me.PanelNewOrder)
         Me.Controls.Add(Me.PanelDrinks)
         Me.Controls.Add(Me.PanelSides)
         Me.Controls.Add(Me.PanelOrderHistory)
         Me.Controls.Add(Me.PanelFood)
-        Me.Controls.Add(Me.PanelOrderDetails)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
