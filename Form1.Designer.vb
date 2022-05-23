@@ -42,7 +42,6 @@ Partial Class Form1
         Me.ButtonTakeAway = New System.Windows.Forms.Button()
         Me.TextBoxPostCode = New System.Windows.Forms.TextBox()
         Me.PanelTop = New System.Windows.Forms.Panel()
-        Me.LabelTest = New System.Windows.Forms.Label()
         Me.ButtonRestart = New System.Windows.Forms.Button()
         Me.LabelTitle = New System.Windows.Forms.Label()
         Me.PanelLeft = New System.Windows.Forms.Panel()
@@ -119,6 +118,11 @@ Partial Class Form1
         Me.Label14 = New System.Windows.Forms.Label()
         Me.ComboBoxPayment = New System.Windows.Forms.ComboBox()
         Me.PanelOrderHistory = New System.Windows.Forms.Panel()
+        Me.ButtonClearFile = New System.Windows.Forms.Button()
+        Me.ButtonCopyReceipt = New System.Windows.Forms.Button()
+        Me.ButtonLoadReceipt = New System.Windows.Forms.Button()
+        Me.ComboBoxReceipt = New System.Windows.Forms.ComboBox()
+        Me.ListBoxLoad = New System.Windows.Forms.ListBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ButtonVoidItem = New System.Windows.Forms.Button()
         Me.PanelNewOrder.SuspendLayout()
@@ -309,26 +313,14 @@ Partial Class Form1
         'PanelTop
         '
         Me.PanelTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.PanelTop.Controls.Add(Me.LabelTest)
         Me.PanelTop.Controls.Add(Me.ButtonRestart)
         Me.PanelTop.Controls.Add(Me.LabelTitle)
         Me.PanelTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelTop.ForeColor = System.Drawing.SystemColors.MenuBar
         Me.PanelTop.Location = New System.Drawing.Point(0, 0)
         Me.PanelTop.Name = "PanelTop"
-        Me.PanelTop.Size = New System.Drawing.Size(1276, 83)
+        Me.PanelTop.Size = New System.Drawing.Size(1172, 83)
         Me.PanelTop.TabIndex = 1
-        '
-        'LabelTest
-        '
-        Me.LabelTest.AutoSize = True
-        Me.LabelTest.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.LabelTest.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.LabelTest.Location = New System.Drawing.Point(92, 25)
-        Me.LabelTest.Name = "LabelTest"
-        Me.LabelTest.Size = New System.Drawing.Size(58, 15)
-        Me.LabelTest.TabIndex = 21
-        Me.LabelTest.Text = "PriceTotal"
         '
         'ButtonRestart
         '
@@ -344,11 +336,12 @@ Partial Class Form1
         'LabelTitle
         '
         Me.LabelTitle.AutoSize = True
-        Me.LabelTitle.Font = New System.Drawing.Font("Gadugi", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.LabelTitle.BackColor = System.Drawing.Color.Transparent
+        Me.LabelTitle.Font = New System.Drawing.Font("Harrington", 45.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.LabelTitle.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.LabelTitle.Location = New System.Drawing.Point(625, 25)
+        Me.LabelTitle.Location = New System.Drawing.Point(535, 9)
         Me.LabelTitle.Name = "LabelTitle"
-        Me.LabelTitle.Size = New System.Drawing.Size(101, 28)
+        Me.LabelTitle.Size = New System.Drawing.Size(251, 72)
         Me.LabelTitle.TabIndex = 0
         Me.LabelTitle.Text = "Pet Cafe"
         '
@@ -364,7 +357,7 @@ Partial Class Form1
         Me.PanelLeft.Dock = System.Windows.Forms.DockStyle.Left
         Me.PanelLeft.Location = New System.Drawing.Point(0, 83)
         Me.PanelLeft.Name = "PanelLeft"
-        Me.PanelLeft.Size = New System.Drawing.Size(200, 541)
+        Me.PanelLeft.Size = New System.Drawing.Size(200, 534)
         Me.PanelLeft.TabIndex = 2
         '
         'ButtonHistory
@@ -990,7 +983,7 @@ Partial Class Form1
         Me.ListBoxReceipt.Enabled = False
         Me.ListBoxReceipt.FormattingEnabled = True
         Me.ListBoxReceipt.ItemHeight = 15
-        Me.ListBoxReceipt.Items.AddRange(New Object() {"Receipt"})
+        Me.ListBoxReceipt.Items.AddRange(New Object() {"RECEIPT", "==================================="})
         Me.ListBoxReceipt.Location = New System.Drawing.Point(637, 16)
         Me.ListBoxReceipt.Name = "ListBoxReceipt"
         Me.ListBoxReceipt.Size = New System.Drawing.Size(284, 469)
@@ -1092,20 +1085,70 @@ Partial Class Form1
         'PanelOrderHistory
         '
         Me.PanelOrderHistory.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.PanelOrderHistory.Controls.Add(Me.ButtonClearFile)
+        Me.PanelOrderHistory.Controls.Add(Me.ButtonCopyReceipt)
+        Me.PanelOrderHistory.Controls.Add(Me.ButtonLoadReceipt)
+        Me.PanelOrderHistory.Controls.Add(Me.ComboBoxReceipt)
+        Me.PanelOrderHistory.Controls.Add(Me.ListBoxLoad)
         Me.PanelOrderHistory.Controls.Add(Me.Label12)
         Me.PanelOrderHistory.Location = New System.Drawing.Point(206, 89)
         Me.PanelOrderHistory.Name = "PanelOrderHistory"
         Me.PanelOrderHistory.Size = New System.Drawing.Size(957, 518)
         Me.PanelOrderHistory.TabIndex = 7
         '
+        'ButtonClearFile
+        '
+        Me.ButtonClearFile.Location = New System.Drawing.Point(11, 179)
+        Me.ButtonClearFile.Name = "ButtonClearFile"
+        Me.ButtonClearFile.Size = New System.Drawing.Size(135, 27)
+        Me.ButtonClearFile.TabIndex = 18
+        Me.ButtonClearFile.Text = "CLEAR FILE"
+        Me.ButtonClearFile.UseVisualStyleBackColor = True
+        '
+        'ButtonCopyReceipt
+        '
+        Me.ButtonCopyReceipt.Location = New System.Drawing.Point(10, 128)
+        Me.ButtonCopyReceipt.Name = "ButtonCopyReceipt"
+        Me.ButtonCopyReceipt.Size = New System.Drawing.Size(136, 42)
+        Me.ButtonCopyReceipt.TabIndex = 17
+        Me.ButtonCopyReceipt.Text = "COPY TO CLIPBOARD"
+        Me.ButtonCopyReceipt.UseVisualStyleBackColor = True
+        '
+        'ButtonLoadReceipt
+        '
+        Me.ButtonLoadReceipt.Location = New System.Drawing.Point(10, 86)
+        Me.ButtonLoadReceipt.Name = "ButtonLoadReceipt"
+        Me.ButtonLoadReceipt.Size = New System.Drawing.Size(136, 36)
+        Me.ButtonLoadReceipt.TabIndex = 16
+        Me.ButtonLoadReceipt.Text = "LOAD"
+        Me.ButtonLoadReceipt.UseVisualStyleBackColor = True
+        '
+        'ComboBoxReceipt
+        '
+        Me.ComboBoxReceipt.FormattingEnabled = True
+        Me.ComboBoxReceipt.Location = New System.Drawing.Point(10, 55)
+        Me.ComboBoxReceipt.Name = "ComboBoxReceipt"
+        Me.ComboBoxReceipt.Size = New System.Drawing.Size(136, 23)
+        Me.ComboBoxReceipt.TabIndex = 15
+        '
+        'ListBoxLoad
+        '
+        Me.ListBoxLoad.FormattingEnabled = True
+        Me.ListBoxLoad.HorizontalScrollbar = True
+        Me.ListBoxLoad.ItemHeight = 15
+        Me.ListBoxLoad.Location = New System.Drawing.Point(667, 9)
+        Me.ListBoxLoad.Name = "ListBoxLoad"
+        Me.ListBoxLoad.Size = New System.Drawing.Size(284, 499)
+        Me.ListBoxLoad.TabIndex = 14
+        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(348, 183)
+        Me.Label12.Location = New System.Drawing.Point(10, 35)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(75, 15)
+        Me.Label12.Size = New System.Drawing.Size(76, 15)
         Me.Label12.TabIndex = 0
-        Me.Label12.Text = "OrderHistory"
+        Me.Label12.Text = "Past Receipts"
         '
         'ButtonVoidItem
         '
@@ -1121,15 +1164,15 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(1276, 624)
+        Me.ClientSize = New System.Drawing.Size(1172, 617)
         Me.Controls.Add(Me.PanelLeft)
         Me.Controls.Add(Me.PanelTop)
+        Me.Controls.Add(Me.PanelOrderHistory)
+        Me.Controls.Add(Me.PanelFood)
         Me.Controls.Add(Me.PanelOrderDetails)
         Me.Controls.Add(Me.PanelNewOrder)
         Me.Controls.Add(Me.PanelDrinks)
         Me.Controls.Add(Me.PanelSides)
-        Me.Controls.Add(Me.PanelOrderHistory)
-        Me.Controls.Add(Me.PanelFood)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -1190,7 +1233,6 @@ Partial Class Form1
     Friend WithEvents PanelSides As Panel
     Friend WithEvents PanelOrderDetails As Panel
     Friend WithEvents ButtonRestart As Button
-    Friend WithEvents LabelTest As Label
     Friend WithEvents PanelOrderHistory As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents ItemTwoLabel As Label
@@ -1253,4 +1295,9 @@ Partial Class Form1
     Friend WithEvents Label21 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label15 As Label
+    Friend WithEvents ButtonCopyReceipt As Button
+    Friend WithEvents ButtonLoadReceipt As Button
+    Friend WithEvents ComboBoxReceipt As ComboBox
+    Friend WithEvents ListBoxLoad As ListBox
+    Friend WithEvents ButtonClearFile As Button
 End Class

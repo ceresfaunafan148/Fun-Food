@@ -4,6 +4,9 @@ Public Class Form1
     Dim ItemPrice(9) As Double 'This array stores the price of each item as a double
     Dim TotalPrice As Double 'This double stores the total price of all items times quantity before tax and surcharge
     Dim FinalPrice As Double 'This double stores the final price of all items times quantity after tax and surcharge
+    Dim W As IO.StreamWriter 'Write
+    Dim R As IO.StreamReader 'Read
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
     End Sub
     Private Sub ButtonTakeAway_Click(sender As Object, e As EventArgs) Handles ButtonTakeAway.Click
@@ -330,6 +333,8 @@ Public Class Form1
 
         ListBoxReceipt.Items.Add("PRICE BEFORE TAX AND SURCHARGES $" + TotalPriceString)
         ListBoxReceipt.Items.Add("PRICE AFTER TAX AND SURCHARGES $" + FinalPriceString)
+
+        ListBoxReceipt.SelectedIndex = ListBoxReceipt.SelectedIndex + 1
     End Sub
     Private Sub TextBoxName_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxName.KeyPress
         If Not (Asc(e.KeyChar) = 8 OrElse e.KeyChar = " ") Then 'Keys.Back as a KeyChar has the same value as 8, I need this to allow backspace
@@ -454,6 +459,38 @@ Public Class Form1
                 e.Handled = True
             End If
         End If
+    End Sub
+
+    Private Sub ButtonCopyReceipt_Click(sender As Object, e As EventArgs) Handles ButtonCopyReceipt.Click
+        Dim CopyLoadReceipt As String
+        For i = 0 To ListBoxLoad.Items.Count - 1
+            CopyLoadReceipt = (Convert.ToString(ListBoxLoad.Items.Item(i)))
+            Clipboard.SetText(CopyLoadReceipt)
+        Next
+    End Sub
+
+    Private Sub WriteReceipt_Click(sender As Object, e As EventArgs) Handles WriteReceipt.Click
+        Dim i As Integer
+        W = New IO.StreamWriter("C:\Users\izhon\Documents\PetCafe Ian Zhong Software\PetCafe\Resources\Receipts.txt") 'uhhhh yeah change file path later to 
+        For i = 0 To ListBoxReceipt.Items.Count - 1
+            W.WriteLine(ListBoxReceipt.Items.Item(i))
+        Next
+        W.Close()
+    End Sub
+
+    Private Sub ButtonLoadReceipt_Click(sender As Object, e As EventArgs) Handles ButtonLoadReceipt.Click
+        R = New IO.StreamReader("C:\Users\izhon\Documents\PetCafe Ian Zhong Software\PetCafe\Resources\Receipts.txt")
+        While (R.Peek() > -1)
+            ListBoxLoad.Items.Add(R.ReadLine)
+        End While
+        R.Close()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles ButtonClearFile.Click
+        Dim i As Integer
+        W = New IO.StreamWriter("C:\Users\izhon\Documents\PetCafe Ian Zhong Software\PetCafe\Resources\Receipts.txt") 'uhhhh yeah change file path later to 
+        W.WriteLine("")
+        W.Close()
     End Sub
 End Class
 
